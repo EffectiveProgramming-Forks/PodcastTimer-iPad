@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA85ADE61937EBC3004CC158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE51937EBC3004CC158 /* Foundation.framework */; };
+		FA85ADE81937EBC3004CC158 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE71937EBC3004CC158 /* CoreGraphics.framework */; };
+		FA85ADEA1937EBC3004CC158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE91937EBC3004CC158 /* UIKit.framework */; };
+		FA85ADF01937EBC3004CC158 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA85ADEE1937EBC3004CC158 /* InfoPlist.strings */; };
+		FA85ADF21937EBC3004CC158 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85ADF11937EBC3004CC158 /* main.m */; };
+		FA85ADF61937EBC3004CC158 /* ESSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85ADF51937EBC3004CC158 /* ESSAppDelegate.m */; };
+		FA85ADF91937EBC3004CC158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA85ADF71937EBC3004CC158 /* Main.storyboard */; };
+		FA85ADFC1937EBC3004CC158 /* ESSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85ADFB1937EBC3004CC158 /* ESSViewController.m */; };
+		FA85ADFE1937EBC3004CC158 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA85ADFD1937EBC3004CC158 /* Images.xcassets */; };
+		FA85AE051937EBC3004CC158 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85AE041937EBC3004CC158 /* XCTest.framework */; };
+		FA85AE061937EBC3004CC158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE51937EBC3004CC158 /* Foundation.framework */; };
+		FA85AE071937EBC3004CC158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE91937EBC3004CC158 /* UIKit.framework */; };
+		FA85AE0F1937EBC3004CC158 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA85AE0D1937EBC3004CC158 /* InfoPlist.strings */; };
+		FA85AE111937EBC3004CC158 /* PodcastTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85AE101937EBC3004CC158 /* PodcastTimerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA85AE081937EBC3004CC158 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA85ADDA1937EBC2004CC158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA85ADE11937EBC3004CC158;
+			remoteInfo = PodcastTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA85ADE21937EBC3004CC158 /* PodcastTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA85ADE51937EBC3004CC158 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA85ADE71937EBC3004CC158 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA85ADE91937EBC3004CC158 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA85ADED1937EBC3004CC158 /* PodcastTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastTimer-Info.plist"; sourceTree = "<group>"; };
+		FA85ADEF1937EBC3004CC158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA85ADF11937EBC3004CC158 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA85ADF31937EBC3004CC158 /* PodcastTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PodcastTimer-Prefix.pch"; sourceTree = "<group>"; };
+		FA85ADF41937EBC3004CC158 /* ESSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESSAppDelegate.h; sourceTree = "<group>"; };
+		FA85ADF51937EBC3004CC158 /* ESSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESSAppDelegate.m; sourceTree = "<group>"; };
+		FA85ADF81937EBC3004CC158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA85ADFA1937EBC3004CC158 /* ESSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESSViewController.h; sourceTree = "<group>"; };
+		FA85ADFB1937EBC3004CC158 /* ESSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESSViewController.m; sourceTree = "<group>"; };
+		FA85ADFD1937EBC3004CC158 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FA85AE031937EBC3004CC158 /* PodcastTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodcastTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA85AE041937EBC3004CC158 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FA85AE0C1937EBC3004CC158 /* PodcastTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastTimerTests-Info.plist"; sourceTree = "<group>"; };
+		FA85AE0E1937EBC3004CC158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA85AE101937EBC3004CC158 /* PodcastTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PodcastTimerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA85ADDF1937EBC3004CC158 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85ADE81937EBC3004CC158 /* CoreGraphics.framework in Frameworks */,
+				FA85ADEA1937EBC3004CC158 /* UIKit.framework in Frameworks */,
+				FA85ADE61937EBC3004CC158 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA85AE001937EBC3004CC158 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85AE051937EBC3004CC158 /* XCTest.framework in Frameworks */,
+				FA85AE071937EBC3004CC158 /* UIKit.framework in Frameworks */,
+				FA85AE061937EBC3004CC158 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA85ADD91937EBC2004CC158 = {
+			isa = PBXGroup;
+			children = (
+				FA85ADEB1937EBC3004CC158 /* PodcastTimer */,
+				FA85AE0A1937EBC3004CC158 /* PodcastTimerTests */,
+				FA85ADE41937EBC3004CC158 /* Frameworks */,
+				FA85ADE31937EBC3004CC158 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA85ADE31937EBC3004CC158 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA85ADE21937EBC3004CC158 /* PodcastTimer.app */,
+				FA85AE031937EBC3004CC158 /* PodcastTimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA85ADE41937EBC3004CC158 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA85ADE51937EBC3004CC158 /* Foundation.framework */,
+				FA85ADE71937EBC3004CC158 /* CoreGraphics.framework */,
+				FA85ADE91937EBC3004CC158 /* UIKit.framework */,
+				FA85AE041937EBC3004CC158 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA85ADEB1937EBC3004CC158 /* PodcastTimer */ = {
+			isa = PBXGroup;
+			children = (
+				FA85ADF41937EBC3004CC158 /* ESSAppDelegate.h */,
+				FA85ADF51937EBC3004CC158 /* ESSAppDelegate.m */,
+				FA85ADF71937EBC3004CC158 /* Main.storyboard */,
+				FA85ADFA1937EBC3004CC158 /* ESSViewController.h */,
+				FA85ADFB1937EBC3004CC158 /* ESSViewController.m */,
+				FA85ADFD1937EBC3004CC158 /* Images.xcassets */,
+				FA85ADEC1937EBC3004CC158 /* Supporting Files */,
+			);
+			path = PodcastTimer;
+			sourceTree = "<group>";
+		};
+		FA85ADEC1937EBC3004CC158 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA85ADED1937EBC3004CC158 /* PodcastTimer-Info.plist */,
+				FA85ADEE1937EBC3004CC158 /* InfoPlist.strings */,
+				FA85ADF11937EBC3004CC158 /* main.m */,
+				FA85ADF31937EBC3004CC158 /* PodcastTimer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA85AE0A1937EBC3004CC158 /* PodcastTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA85AE101937EBC3004CC158 /* PodcastTimerTests.m */,
+				FA85AE0B1937EBC3004CC158 /* Supporting Files */,
+			);
+			path = PodcastTimerTests;
+			sourceTree = "<group>";
+		};
+		FA85AE0B1937EBC3004CC158 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA85AE0C1937EBC3004CC158 /* PodcastTimerTests-Info.plist */,
+				FA85AE0D1937EBC3004CC158 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA85ADE11937EBC3004CC158 /* PodcastTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA85AE141937EBC3004CC158 /* Build configuration list for PBXNativeTarget "PodcastTimer" */;
+			buildPhases = (
+				FA85ADDE1937EBC3004CC158 /* Sources */,
+				FA85ADDF1937EBC3004CC158 /* Frameworks */,
+				FA85ADE01937EBC3004CC158 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PodcastTimer;
+			productName = PodcastTimer;
+			productReference = FA85ADE21937EBC3004CC158 /* PodcastTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA85AE021937EBC3004CC158 /* PodcastTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA85AE171937EBC3004CC158 /* Build configuration list for PBXNativeTarget "PodcastTimerTests" */;
+			buildPhases = (
+				FA85ADFF1937EBC3004CC158 /* Sources */,
+				FA85AE001937EBC3004CC158 /* Frameworks */,
+				FA85AE011937EBC3004CC158 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA85AE091937EBC3004CC158 /* PBXTargetDependency */,
+			);
+			name = PodcastTimerTests;
+			productName = PodcastTimerTests;
+			productReference = FA85AE031937EBC3004CC158 /* PodcastTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA85ADDA1937EBC2004CC158 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ESS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Effective Programming";
+				TargetAttributes = {
+					FA85AE021937EBC3004CC158 = {
+						TestTargetID = FA85ADE11937EBC3004CC158;
+					};
+				};
+			};
+			buildConfigurationList = FA85ADDD1937EBC2004CC158 /* Build configuration list for PBXProject "PodcastTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA85ADD91937EBC2004CC158;
+			productRefGroup = FA85ADE31937EBC3004CC158 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA85ADE11937EBC3004CC158 /* PodcastTimer */,
+				FA85AE021937EBC3004CC158 /* PodcastTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA85ADE01937EBC3004CC158 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85ADFE1937EBC3004CC158 /* Images.xcassets in Resources */,
+				FA85ADF01937EBC3004CC158 /* InfoPlist.strings in Resources */,
+				FA85ADF91937EBC3004CC158 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA85AE011937EBC3004CC158 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85AE0F1937EBC3004CC158 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA85ADDE1937EBC3004CC158 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85ADF61937EBC3004CC158 /* ESSAppDelegate.m in Sources */,
+				FA85ADF21937EBC3004CC158 /* main.m in Sources */,
+				FA85ADFC1937EBC3004CC158 /* ESSViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA85ADFF1937EBC3004CC158 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA85AE111937EBC3004CC158 /* PodcastTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA85AE091937EBC3004CC158 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA85ADE11937EBC3004CC158 /* PodcastTimer */;
+			targetProxy = FA85AE081937EBC3004CC158 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA85ADEE1937EBC3004CC158 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA85ADEF1937EBC3004CC158 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA85ADF71937EBC3004CC158 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA85ADF81937EBC3004CC158 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA85AE0D1937EBC3004CC158 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA85AE0E1937EBC3004CC158 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA85AE121937EBC3004CC158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FA85AE131937EBC3004CC158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA85AE151937EBC3004CC158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastTimer/PodcastTimer-Prefix.pch";
+				INFOPLIST_FILE = "PodcastTimer/PodcastTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA85AE161937EBC3004CC158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastTimer/PodcastTimer-Prefix.pch";
+				INFOPLIST_FILE = "PodcastTimer/PodcastTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FA85AE181937EBC3004CC158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PodcastTimer.app/PodcastTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastTimer/PodcastTimer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PodcastTimerTests/PodcastTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FA85AE191937EBC3004CC158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PodcastTimer.app/PodcastTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PodcastTimer/PodcastTimer-Prefix.pch";
+				INFOPLIST_FILE = "PodcastTimerTests/PodcastTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA85ADDD1937EBC2004CC158 /* Build configuration list for PBXProject "PodcastTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA85AE121937EBC3004CC158 /* Debug */,
+				FA85AE131937EBC3004CC158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA85AE141937EBC3004CC158 /* Build configuration list for PBXNativeTarget "PodcastTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA85AE151937EBC3004CC158 /* Debug */,
+				FA85AE161937EBC3004CC158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA85AE171937EBC3004CC158 /* Build configuration list for PBXNativeTarget "PodcastTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA85AE181937EBC3004CC158 /* Debug */,
+				FA85AE191937EBC3004CC158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA85ADDA1937EBC2004CC158 /* Project object */;
+}
