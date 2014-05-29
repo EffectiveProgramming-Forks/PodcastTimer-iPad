@@ -21,6 +21,7 @@
 		FA85AE071937EBC3004CC158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE91937EBC3004CC158 /* UIKit.framework */; };
 		FA85AE0F1937EBC3004CC158 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA85AE0D1937EBC3004CC158 /* InfoPlist.strings */; };
 		FA85AE111937EBC3004CC158 /* PodcastTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85AE101937EBC3004CC158 /* PodcastTimerTests.m */; };
+		FA85AE1D1937F2A8004CC158 /* EPTPodcasterSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85AE1C1937F2A8004CC158 /* EPTPodcasterSelectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		FA85AE0C1937EBC3004CC158 /* PodcastTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PodcastTimerTests-Info.plist"; sourceTree = "<group>"; };
 		FA85AE0E1937EBC3004CC158 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA85AE101937EBC3004CC158 /* PodcastTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PodcastTimerTests.m; sourceTree = "<group>"; };
+		FA85AE1B1937F2A8004CC158 /* EPTPodcasterSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTPodcasterSelectionView.h; sourceTree = "<group>"; };
+		FA85AE1C1937F2A8004CC158 /* EPTPodcasterSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcasterSelectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,10 @@
 		FA85ADEB1937EBC3004CC158 /* PodcastTimer */ = {
 			isa = PBXGroup;
 			children = (
+				FA85AE1A1937F1B1004CC158 /* Podcaster Selection Screen */,
 				FA85ADF41937EBC3004CC158 /* ESSAppDelegate.h */,
 				FA85ADF51937EBC3004CC158 /* ESSAppDelegate.m */,
 				FA85ADF71937EBC3004CC158 /* Main.storyboard */,
-				FA85ADFA1937EBC3004CC158 /* ESSViewController.h */,
-				FA85ADFB1937EBC3004CC158 /* ESSViewController.m */,
 				FA85ADFD1937EBC3004CC158 /* Images.xcassets */,
 				FA85ADEC1937EBC3004CC158 /* Supporting Files */,
 			);
@@ -150,6 +152,17 @@
 				FA85AE0D1937EBC3004CC158 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA85AE1A1937F1B1004CC158 /* Podcaster Selection Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FA85ADFA1937EBC3004CC158 /* ESSViewController.h */,
+				FA85ADFB1937EBC3004CC158 /* ESSViewController.m */,
+				FA85AE1B1937F2A8004CC158 /* EPTPodcasterSelectionView.h */,
+				FA85AE1C1937F2A8004CC158 /* EPTPodcasterSelectionView.m */,
+			);
+			name = "Podcaster Selection Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA85ADF61937EBC3004CC158 /* ESSAppDelegate.m in Sources */,
+				FA85AE1D1937F2A8004CC158 /* EPTPodcasterSelectionView.m in Sources */,
 				FA85ADF21937EBC3004CC158 /* main.m in Sources */,
 				FA85ADFC1937EBC3004CC158 /* ESSViewController.m in Sources */,
 			);
