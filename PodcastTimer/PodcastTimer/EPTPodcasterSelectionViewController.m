@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 Effective Programming. All rights reserved.
 //
 
-#import "ESSViewController.h"
+#import "EPTPodcasterSelectionViewController.h"
 #import "EPTPodcasterSelectionView.h"
 #import "EPTPodcastTimerMainViewController.h"
 
 
-@interface ESSViewController () <EPTPodcasterSelectionViewDelegate>
+@interface EPTPodcasterSelectionViewController () <EPTPodcasterSelectionViewDelegate>
 
 @property (nonatomic) NSInteger amountOfPodcasters;
 
 @end
 
-@implementation ESSViewController
+@implementation EPTPodcasterSelectionViewController
 
 - (void)viewDidLoad
 {

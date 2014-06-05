@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ESSViewController : UIViewController
+@interface EPTPodcasterSelectionViewController : UIViewController
 
 @end
