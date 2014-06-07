@@ -19,11 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-2057" y="-269"/>
         </scene>
-        <!--View Controller-->
+        <!--Podcaster Selection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="ESSViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EPTPodcasterSelectionScreen" id="BYZ-38-t0r" customClass="EPTPodcasterSelectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -86,16 +85,17 @@
                     <navigationItem key="navigationItem" id="Foz-db-qgH"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <segue destination="R51-Bl-czo" kind="push" identifier="podcasters selected segue" id="zTY-SV-Tga"/>
+                        <segue destination="R51-Bl-czo" kind="push" identifier="podcasters selected segue" id="Aas-ak-jlB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-884" y="-141"/>
         </scene>
         <!--Podcast Timer Main View Controller-->
         <scene sceneID="WBS-Ai-hVA">
             <objects>
-                <viewController id="R51-Bl-czo" customClass="EPTPodcastTimerMainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EPTPodcastTimerScreen" id="R51-Bl-czo" customClass="EPTPodcastTimerMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WaI-sF-Agz"/>
                         <viewControllerLayoutGuide type="bottom" id="kEu-bc-7kA"/>

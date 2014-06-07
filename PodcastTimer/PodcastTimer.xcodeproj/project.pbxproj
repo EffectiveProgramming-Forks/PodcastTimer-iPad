@@ -506,7 +506,7 @@
 					"-framework",
 					XCTest,
 					"-force_load",
-					"$(SRCROOT)/PodcastTimer/libOCMock.a",
+					"$(SRCROOT)/libOCMock.a",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,7 +537,7 @@
 					"-framework",
 					XCTest,
 					"-force_load",
-					"$(SRCROOT)/PodcastTimer/libOCMock.a",
+					"$(SRCROOT)/libOCMock.a",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
