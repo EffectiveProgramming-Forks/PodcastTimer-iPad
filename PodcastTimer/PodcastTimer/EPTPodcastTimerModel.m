@@ -8,6 +8,7 @@
 
 #import "EPTPodcastTimerModel.h"
 #import "EPTTimer.h"
+#import "EPTPodcasterModel.h"
 
 @interface EPTPodcastTimerModel () <EPTTimerDelegate>
 
@@ -31,7 +32,7 @@
         self.amountOfPodcasters = amount;
         self.podcasters = [[NSMutableArray alloc] init];
         for (int i=0; i<amount; ++i) {
-            [self.podcasters addObject:[[NSDate alloc] init]];
+            [self.podcasters addObject:[[EPTPodcasterModel alloc] initWithPodcasterName:[NSString stringWithFormat:@"Podcaster %i", i+1]]];
         }
         self.timer = timer;
     }
@@ -54,8 +55,8 @@
     NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:self.previousDate];
     self.previousDate = currentDate;
     self.currentTotalTime = [self.currentTotalTime dateByAddingTimeInterval:timeInterval];
-    NSDate *currentPodcaster = self.podcasters[self.currentPodcasterIndex];
-    self.podcasters[self.currentPodcasterIndex] = [currentPodcaster dateByAddingTimeInterval:timeInterval];
+    EPTPodcasterModel *currentPodcaster = self.podcasters[self.currentPodcasterIndex];
+    [currentPodcaster addTimeIntervalToTotalTime:timeInterval];
     
     
     

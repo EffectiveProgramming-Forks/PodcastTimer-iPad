@@ -12,7 +12,11 @@
 		FA0692661943972F0095A30E /* EPTPodcastTimerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0692651943972F0095A30E /* EPTPodcastTimerModel.m */; };
 		FA0692681943A2B80095A30E /* EPTPodcastTimerModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0692671943A2B80095A30E /* EPTPodcastTimerModelTests.m */; };
 		FA06926C1943A58E0095A30E /* EPTTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06926B1943A58E0095A30E /* EPTTimer.m */; };
+		FA3E39FC195D18C300655133 /* EPTPodcasterModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E39FB195D18C300655133 /* EPTPodcasterModelTests.m */; };
 		FA4F567A193A48ED006EC676 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4F566E193A48ED006EC676 /* libOCMock.a */; };
+		FA574B261953AB0200329324 /* EPTPodcastTimerMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA574B251953AB0200329324 /* EPTPodcastTimerMainTableViewCell.xib */; };
+		FA574B291953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA574B281953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m */; };
+		FA574B2C1953B0ED00329324 /* EPTPodcasterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA574B2B1953B0ED00329324 /* EPTPodcasterModel.m */; };
 		FA85ADE61937EBC3004CC158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE51937EBC3004CC158 /* Foundation.framework */; };
 		FA85ADE81937EBC3004CC158 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE71937EBC3004CC158 /* CoreGraphics.framework */; };
 		FA85ADEA1937EBC3004CC158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA85ADE91937EBC3004CC158 /* UIKit.framework */; };
@@ -49,6 +53,7 @@
 		FA0692671943A2B80095A30E /* EPTPodcastTimerModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcastTimerModelTests.m; sourceTree = "<group>"; };
 		FA06926A1943A58E0095A30E /* EPTTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTTimer.h; sourceTree = "<group>"; };
 		FA06926B1943A58E0095A30E /* EPTTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTTimer.m; sourceTree = "<group>"; };
+		FA3E39FB195D18C300655133 /* EPTPodcasterModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcasterModelTests.m; sourceTree = "<group>"; };
 		FA4F566E193A48ED006EC676 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		FA4F5670193A48ED006EC676 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		FA4F5671193A48ED006EC676 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
@@ -60,6 +65,11 @@
 		FA4F5677193A48ED006EC676 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		FA4F5678193A48ED006EC676 /* OCMStubMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubMacroState.h; sourceTree = "<group>"; };
 		FA4F5679193A48ED006EC676 /* OCMVerifyMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMVerifyMacroState.h; sourceTree = "<group>"; };
+		FA574B251953AB0200329324 /* EPTPodcastTimerMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPTPodcastTimerMainTableViewCell.xib; sourceTree = "<group>"; };
+		FA574B271953AE3100329324 /* EPTPodcastTimerMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTPodcastTimerMainTableViewCell.h; sourceTree = "<group>"; };
+		FA574B281953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcastTimerMainTableViewCell.m; sourceTree = "<group>"; };
+		FA574B2A1953B0ED00329324 /* EPTPodcasterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTPodcasterModel.h; sourceTree = "<group>"; };
+		FA574B2B1953B0ED00329324 /* EPTPodcasterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcasterModel.m; sourceTree = "<group>"; };
 		FA85ADE21937EBC3004CC158 /* PodcastTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA85ADE51937EBC3004CC158 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA85ADE71937EBC3004CC158 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +145,26 @@
 			path = OCMock;
 			sourceTree = "<group>";
 		};
+		FA574B241953AA8000329324 /* Main Table View */ = {
+			isa = PBXGroup;
+			children = (
+				FA574B251953AB0200329324 /* EPTPodcastTimerMainTableViewCell.xib */,
+				FA574B271953AE3100329324 /* EPTPodcastTimerMainTableViewCell.h */,
+				FA574B281953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m */,
+			);
+			name = "Main Table View";
+			sourceTree = "<group>";
+		};
+		FA574B2D1953B0F200329324 /* Podcaster model */ = {
+			isa = PBXGroup;
+			children = (
+				FA574B2A1953B0ED00329324 /* EPTPodcasterModel.h */,
+				FA574B2B1953B0ED00329324 /* EPTPodcasterModel.m */,
+				FA3E39FB195D18C300655133 /* EPTPodcasterModelTests.m */,
+			);
+			name = "Podcaster model";
+			sourceTree = "<group>";
+		};
 		FA85ADD91937EBC2004CC158 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +200,7 @@
 		FA85ADEB1937EBC3004CC158 /* PodcastTimer */ = {
 			isa = PBXGroup;
 			children = (
+				FA574B2D1953B0F200329324 /* Podcaster model */,
 				FA0692691943A5770095A30E /* EPTTimer */,
 				FA85AE1E19396175004CC158 /* Podcast Timer Main Screen */,
 				FA85AE1A1937F1B1004CC158 /* Podcaster Selection Screen */,
@@ -225,6 +256,7 @@
 		FA85AE1E19396175004CC158 /* Podcast Timer Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				FA574B241953AA8000329324 /* Main Table View */,
 				FA85AE1F193961AA004CC158 /* EPTPodcastTimerMainViewController.h */,
 				FA85AE20193961AA004CC158 /* EPTPodcastTimerMainViewController.m */,
 				FA069261194395770095A30E /* EPTPodcastTimerMainView.h */,
@@ -314,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA85ADFE1937EBC3004CC158 /* Images.xcassets in Resources */,
+				FA574B261953AB0200329324 /* EPTPodcastTimerMainTableViewCell.xib in Resources */,
 				FA85ADF01937EBC3004CC158 /* InfoPlist.strings in Resources */,
 				FA85ADF91937EBC3004CC158 /* Main.storyboard in Resources */,
 			);
@@ -335,7 +368,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA85ADF61937EBC3004CC158 /* ESSAppDelegate.m in Sources */,
+				FA574B291953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m in Sources */,
 				FA85AE1D1937F2A8004CC158 /* EPTPodcasterSelectionView.m in Sources */,
+				FA574B2C1953B0ED00329324 /* EPTPodcasterModel.m in Sources */,
 				FA85ADF21937EBC3004CC158 /* main.m in Sources */,
 				FA85AE21193961AA004CC158 /* EPTPodcastTimerMainViewController.m in Sources */,
 				FA0692661943972F0095A30E /* EPTPodcastTimerModel.m in Sources */,
@@ -350,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0692681943A2B80095A30E /* EPTPodcastTimerModelTests.m in Sources */,
+				FA3E39FC195D18C300655133 /* EPTPodcasterModelTests.m in Sources */,
 				FA06926019400E7C0095A30E /* EPTPodcasterSelectionViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
