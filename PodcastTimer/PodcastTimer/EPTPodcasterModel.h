@@ -21,5 +21,6 @@
 
 - (instancetype)initWithPodcasterName:(NSString *)name;
 - (void)addTimeIntervalToTotalTime:(NSTimeInterval)timeInterval;
+- (void)updatePercentageBasedOnTotalTime:(NSDate *)totalTime;
 
 @end

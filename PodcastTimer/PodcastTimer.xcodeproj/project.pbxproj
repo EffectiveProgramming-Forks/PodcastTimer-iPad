@@ -34,6 +34,7 @@
 		FA85AE21193961AA004CC158 /* EPTPodcastTimerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85AE20193961AA004CC158 /* EPTPodcastTimerMainViewController.m */; };
 		FAAB87261964D03500251BC1 /* EPTPodcasterModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB87251964D03500251BC1 /* EPTPodcasterModelFactory.m */; };
 		FAAB87281964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB87271964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m */; };
+		FAAB872C1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB872B1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		FAAB87241964D03500251BC1 /* EPTPodcasterModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTPodcasterModelFactory.h; sourceTree = "<group>"; };
 		FAAB87251964D03500251BC1 /* EPTPodcasterModelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcasterModelFactory.m; sourceTree = "<group>"; };
 		FAAB87271964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcastTimerMainViewControllerTests.m; sourceTree = "<group>"; };
+		FAAB872A1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSDate_ZeroTime.h"; sourceTree = "<group>"; };
+		FAAB872B1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSDate_ZeroTime.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				FA85ADEE1937EBC3004CC158 /* InfoPlist.strings */,
 				FA85ADF11937EBC3004CC158 /* main.m */,
 				FA85ADF31937EBC3004CC158 /* PodcastTimer-Prefix.pch */,
+				FAAB872A1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.h */,
+				FAAB872B1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 			files = (
 				FA85ADF61937EBC3004CC158 /* ESSAppDelegate.m in Sources */,
 				FA574B291953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m in Sources */,
+				FAAB872C1964EE8B00251BC1 /* NSDate+NSDate_ZeroTime.m in Sources */,
 				FA85AE1D1937F2A8004CC158 /* EPTPodcasterSelectionView.m in Sources */,
 				FAAB87261964D03500251BC1 /* EPTPodcasterModelFactory.m in Sources */,
 				FA574B2C1953B0ED00329324 /* EPTPodcasterModel.m in Sources */,

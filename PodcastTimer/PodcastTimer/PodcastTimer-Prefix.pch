@@ -18,4 +18,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <OCMock/OCMock.h>
+    #import "NSDate+NSDate_ZeroTime.h"
 #endif
