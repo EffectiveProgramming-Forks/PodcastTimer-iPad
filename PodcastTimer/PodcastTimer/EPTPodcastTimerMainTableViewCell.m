@@ -8,7 +8,7 @@
 
 #import "EPTPodcastTimerMainTableViewCell.h"
 
-@interface EPTPodcastTimerMainTableViewCell ()
+@interface EPTPodcastTimerMainTableViewCell () <EPTPodcasterModelDelegagte>
 
 @property (nonatomic) IBOutlet UILabel *podcasterNameLabel;
 @property (nonatomic) IBOutlet UILabel *podcasterTimeLabel;
@@ -17,25 +17,16 @@
 
 @implementation EPTPodcastTimerMainTableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+- (void)setPodcaster:(EPTPodcasterModel *)podcaster {
+    _podcaster = podcaster;
+    podcaster.delegate = self;
+    self.podcasterNameLabel.text = podcaster.name;
 }
 
-- (void)awakeFromNib
-{
-    // Initialization code
-}
+#pragma mark EPTPodcasterModelDelegagte
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)totalTimeUpdatedTo:(NSString *)dateTimeString {
+    self.podcasterTimeLabel.text = dateTimeString;
 }
 
 @end

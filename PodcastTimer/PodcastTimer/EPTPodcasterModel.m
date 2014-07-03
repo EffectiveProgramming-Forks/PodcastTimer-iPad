@@ -1,10 +1,9 @@
 #import "EPTPodcasterModel.h"
 
-#define DateTimeFormatString @"HH:mm:ss"
-
 @interface EPTPodcasterModel ()
 
 @property (nonatomic) NSDate *totalTime;
+@property (nonatomic, readwrite) NSString *name;
 
 @end
 
@@ -17,6 +16,7 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:DateTimeFormatString];
         self.totalTime = [formatter dateFromString:startString];
+        self.name = name;
     }
     
     return self;

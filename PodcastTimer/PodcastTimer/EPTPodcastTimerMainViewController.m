@@ -10,7 +10,7 @@
 #import "EPTPodcastTimerMainView.h"
 #import "EPTPodcastTimerModel.h"
 
-@interface EPTPodcastTimerMainViewController ()
+@interface EPTPodcastTimerMainViewController () <EPTPodcastTimerModelDelegate, EPTPodcastTimerMainViewDelegate>
 
 @property (nonatomic) EPTPodcastTimerModel *model;
 @property (nonatomic) EPTPodcastTimerMainView *mainView;
@@ -21,7 +21,11 @@
 
 - (void)setupModel:(EPTPodcastTimerModel *)model andView:(EPTPodcastTimerMainView *)view {
     self.mainView = view;
+    self.mainView.delegate = self;
     self.model = model;
+    self.model.delegate = self;
+    self.mainView.podcasters = self.model.podcasters;
+    [self.model startTimer];
 }
 
 - (void)viewDidLoad
@@ -36,6 +40,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark EPTPodcastTimerModelDelegate
+
+-(void)totalTimeUpdatedTo:(NSString *)totalTime {
+    [self.mainView timeUpdatedTo:totalTime];
+}
+
+#pragma mark EPTPodcastTimerMainViewDelegate
+
+- (void)podcasterSelectedAtIndex:(NSInteger)index {
+    self.model.currentPodcasterIndex = index;
 }
 
 

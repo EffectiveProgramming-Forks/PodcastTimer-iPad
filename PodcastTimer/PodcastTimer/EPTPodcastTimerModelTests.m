@@ -10,10 +10,11 @@
 #import <OCMock/OCMock.h>
 #import "EPTPodcastTimerModel.h"
 #import "EPTTimer.h"
+#import "EPTPodcasterModelFactory.h"
 
 @interface EPTPodcastTimerModel ()
 
-- (instancetype)initWithAmountOfPodcasters:(NSInteger)amount andTimer:(EPTTimer *)timer;
+- (instancetype)initWithAmountOfPodcasters:(NSInteger)amount withPodcasterFactory:(EPTPodcasterModelFactory *)podcasterFactory andTimer:(EPTTimer *)timer;
 
 @end
 
@@ -21,6 +22,10 @@
 
 @property (nonatomic) EPTPodcastTimerModel *testObject;
 @property (nonatomic) id timerMock;
+@property (nonatomic) id podcasterFactoryMock;
+@property (nonatomic) id podcasterModelMock;
+@property (nonatomic) id<EPTTimerDelegate> timerDelegate;
+@property (nonatomic) id delegateMock;
 
 @end
 
@@ -30,7 +35,16 @@
 {
     [super setUp];
     self.timerMock = [OCMockObject niceMockForClass:EPTTimer.class];
-    self.testObject = [[EPTPodcastTimerModel alloc] initWithAmountOfPodcasters:5 andTimer:self.timerMock];
+    [[self.timerMock expect] setDelegate:[OCMArg checkWithBlock:^BOOL(id<EPTTimerDelegate> delegate) {
+        self.timerDelegate = delegate;
+        return YES;
+    }]];
+    self.delegateMock = OCMProtocolMock(@protocol(EPTPodcastTimerModelDelegate));
+    self.podcasterFactoryMock = [OCMockObject niceMockForClass:EPTPodcasterModelFactory.class];
+    self.podcasterModelMock = [OCMockObject niceMockForClass:EPTPodcasterModel.class];
+    [[[self.podcasterFactoryMock stub] andReturn:self.podcasterModelMock] podcasterModelWithName:OCMOCK_ANY];
+    self.testObject = [[EPTPodcastTimerModel alloc] initWithAmountOfPodcasters:5 withPodcasterFactory:self.podcasterFactoryMock andTimer:self.timerMock];
+    self.testObject.delegate = self.delegateMock;
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -40,15 +54,23 @@
     [super tearDown];
 }
 
+- (void)testInit_CreatesCorrectAmountOfPodcasters {
+    self.podcasterFactoryMock = [OCMockObject niceMockForClass:EPTPodcasterModelFactory.class];
+    [[[self.podcasterFactoryMock expect] andReturn:self.podcasterModelMock ] podcasterModelWithName:@"Podcaster 1"];
+    [[[self.podcasterFactoryMock expect] andReturn:self.podcasterModelMock ] podcasterModelWithName:@"Podcaster 2"];
+    
+    self.testObject = [[EPTPodcastTimerModel alloc] initWithAmountOfPodcasters:2 withPodcasterFactory:self.podcasterFactoryMock andTimer:nil];
+    
+    OCMVerifyAll(self.podcasterFactoryMock);
+}
+
 - (void)testStartTimer_SchedulesTimerCorrectly_andInitializesCurrentTotalTime {
     
     [[self.timerMock expect] scheduleTimer];
-    [[self.timerMock expect] setDelegate:self.testObject];
     
     [self.testObject startTimer];
     
-    [self.timerMock verify];
-    [self.timerMock verify];
+    OCMVerifyAll(self.timerMock);
     XCTAssertNotNil(self.testObject.currentTotalTime);
 }
 
@@ -69,19 +91,22 @@
 }
 
 - (void)testTimerFired_IncreasesCurrentPodacstersTotalTime {
-    [self.testObject startTimer];
     self.testObject.currentPodcasterIndex = 1;
-    NSDate *startDate = [self.testObject.podcasters[1] copy];
+    [[[self.podcasterModelMock expect] ignoringNonObjectArgs] addTimeIntervalToTotalTime:0];
+    [self.testObject startTimer];
+    [self.timerDelegate timerFired];
     
-    [NSThread sleepForTimeInterval:0.1];
+    OCMVerifyAll(self.podcasterModelMock);
+}
+
+- (void)testTimerFired_UpdatesDelegateWithNewTime {
     
-    [((id<EPTTimerDelegate>)self.testObject) timerFired];
+    OCMExpect([self.delegateMock totalTimeUpdatedTo:@"00:00:01"]);
     
-    NSDate *finishedDate = self.testObject.podcasters[1];
-    
-    NSTimeInterval timeInterval = [finishedDate timeIntervalSinceDate:startDate];
-    
-    XCTAssertTrue(timeInterval >= 0.1);
+    [self.testObject startTimer];
+    [NSThread sleepForTimeInterval:1.0];
+    [self.timerDelegate timerFired];
+    [self.delegateMock verify];
 }
 
 @end

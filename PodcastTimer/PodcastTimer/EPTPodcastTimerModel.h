@@ -7,6 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EPTPodcasterModelFactory.h"
+
+@protocol EPTPodcastTimerModelDelegate <NSObject>
+
+- (void)totalTimeUpdatedTo:(NSString *)totalTime;
+
+@end
 
 @interface EPTPodcastTimerModel : NSObject
 
@@ -16,5 +23,6 @@
 @property (nonatomic, readonly) NSMutableArray *podcasters;
 @property (nonatomic, readonly) NSDate *currentTotalTime;
 @property (nonatomic) NSInteger currentPodcasterIndex;
+@property (nonatomic, weak) id<EPTPodcastTimerModelDelegate> delegate;
 
 @end

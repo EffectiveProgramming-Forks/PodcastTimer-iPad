@@ -17,6 +17,7 @@
 @interface EPTPodcasterModel : NSObject
 
 @property (nonatomic, weak) id<EPTPodcasterModelDelegagte> delegate;
+@property (nonatomic, readonly) NSString *name;
 
 - (instancetype)initWithPodcasterName:(NSString *)name;
 - (void)addTimeIntervalToTotalTime:(NSTimeInterval)timeInterval;

@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EPTPodcastTimerMainViewDelegate <NSObject>
+
+- (void)podcasterSelectedAtIndex:(NSInteger)index;
+
+@end
+
 @interface EPTPodcastTimerMainView : UIView
+
+@property (nonatomic, weak) id<EPTPodcastTimerMainViewDelegate> delegate;
+@property (nonatomic) NSArray *podcasters;
+
+- (void)timeUpdatedTo:(NSString *)time;
 
 @end

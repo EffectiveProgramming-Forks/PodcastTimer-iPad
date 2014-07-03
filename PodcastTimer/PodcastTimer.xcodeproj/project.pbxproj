@@ -32,6 +32,8 @@
 		FA85AE0F1937EBC3004CC158 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA85AE0D1937EBC3004CC158 /* InfoPlist.strings */; };
 		FA85AE1D1937F2A8004CC158 /* EPTPodcasterSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85AE1C1937F2A8004CC158 /* EPTPodcasterSelectionView.m */; };
 		FA85AE21193961AA004CC158 /* EPTPodcastTimerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85AE20193961AA004CC158 /* EPTPodcastTimerMainViewController.m */; };
+		FAAB87261964D03500251BC1 /* EPTPodcasterModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB87251964D03500251BC1 /* EPTPodcasterModelFactory.m */; };
+		FAAB87281964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAB87271964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		FA85AE1C1937F2A8004CC158 /* EPTPodcasterSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcasterSelectionView.m; sourceTree = "<group>"; };
 		FA85AE1F193961AA004CC158 /* EPTPodcastTimerMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTPodcastTimerMainViewController.h; sourceTree = "<group>"; };
 		FA85AE20193961AA004CC158 /* EPTPodcastTimerMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcastTimerMainViewController.m; sourceTree = "<group>"; };
+		FAAB87241964D03500251BC1 /* EPTPodcasterModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTPodcasterModelFactory.h; sourceTree = "<group>"; };
+		FAAB87251964D03500251BC1 /* EPTPodcasterModelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcasterModelFactory.m; sourceTree = "<group>"; };
+		FAAB87271964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTPodcastTimerMainViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,8 @@
 				FA574B2A1953B0ED00329324 /* EPTPodcasterModel.h */,
 				FA574B2B1953B0ED00329324 /* EPTPodcasterModel.m */,
 				FA3E39FB195D18C300655133 /* EPTPodcasterModelTests.m */,
+				FAAB87241964D03500251BC1 /* EPTPodcasterModelFactory.h */,
+				FAAB87251964D03500251BC1 /* EPTPodcasterModelFactory.m */,
 			);
 			name = "Podcaster model";
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 		FA85AE1E19396175004CC158 /* Podcast Timer Main Screen */ = {
 			isa = PBXGroup;
 			children = (
+				FAAB87291964E7DA00251BC1 /* tests */,
 				FA574B241953AA8000329324 /* Main Table View */,
 				FA85AE1F193961AA004CC158 /* EPTPodcastTimerMainViewController.h */,
 				FA85AE20193961AA004CC158 /* EPTPodcastTimerMainViewController.m */,
@@ -263,9 +271,17 @@
 				FA069262194395770095A30E /* EPTPodcastTimerMainView.m */,
 				FA0692641943972F0095A30E /* EPTPodcastTimerModel.h */,
 				FA0692651943972F0095A30E /* EPTPodcastTimerModel.m */,
-				FA0692671943A2B80095A30E /* EPTPodcastTimerModelTests.m */,
 			);
 			name = "Podcast Timer Main Screen";
+			sourceTree = "<group>";
+		};
+		FAAB87291964E7DA00251BC1 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA0692671943A2B80095A30E /* EPTPodcastTimerModelTests.m */,
+				FAAB87271964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m */,
+			);
+			name = tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +386,7 @@
 				FA85ADF61937EBC3004CC158 /* ESSAppDelegate.m in Sources */,
 				FA574B291953AE3100329324 /* EPTPodcastTimerMainTableViewCell.m in Sources */,
 				FA85AE1D1937F2A8004CC158 /* EPTPodcasterSelectionView.m in Sources */,
+				FAAB87261964D03500251BC1 /* EPTPodcasterModelFactory.m in Sources */,
 				FA574B2C1953B0ED00329324 /* EPTPodcasterModel.m in Sources */,
 				FA85ADF21937EBC3004CC158 /* main.m in Sources */,
 				FA85AE21193961AA004CC158 /* EPTPodcastTimerMainViewController.m in Sources */,
@@ -386,6 +403,7 @@
 			files = (
 				FA0692681943A2B80095A30E /* EPTPodcastTimerModelTests.m in Sources */,
 				FA3E39FC195D18C300655133 /* EPTPodcasterModelTests.m in Sources */,
+				FAAB87281964E31600251BC1 /* EPTPodcastTimerMainViewControllerTests.m in Sources */,
 				FA06926019400E7C0095A30E /* EPTPodcasterSelectionViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,14 +25,16 @@
 - (instancetype)initWithAmountOfPodcasters:(NSInteger)amount {
     
     
-    return [self initWithAmountOfPodcasters:amount andTimer:[[EPTTimer alloc] init]];
+    return [self initWithAmountOfPodcasters:amount withPodcasterFactory:[[EPTPodcasterModelFactory alloc] init] andTimer:[[EPTTimer alloc] init]];
 }
-- (instancetype)initWithAmountOfPodcasters:(NSInteger)amount andTimer:(EPTTimer *)timer {
+
+- (instancetype)initWithAmountOfPodcasters:(NSInteger)amount withPodcasterFactory:(EPTPodcasterModelFactory *)podcasterFactory andTimer:(EPTTimer *)timer {
     if (self = [super init]) {
         self.amountOfPodcasters = amount;
         self.podcasters = [[NSMutableArray alloc] init];
         for (int i=0; i<amount; ++i) {
-            [self.podcasters addObject:[[EPTPodcasterModel alloc] initWithPodcasterName:[NSString stringWithFormat:@"Podcaster %i", i+1]]];
+            EPTPodcasterModel *podcaster = [podcasterFactory podcasterModelWithName:[NSString stringWithFormat:@"Podcaster %i", i+1]];
+            [self.podcasters addObject:podcaster];
         }
         self.timer = timer;
     }
@@ -42,7 +44,10 @@
 
 - (void)startTimer {
     self.previousDate = [NSDate date];
-    self.currentTotalTime = [[NSDate alloc] init];
+    NSString *startString = @"00:00:00";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:DateTimeFormatString];
+    self.currentTotalTime = [formatter dateFromString:startString];
     [self.timer scheduleTimer];
     self.timer.delegate = self;
     
@@ -58,7 +63,10 @@
     EPTPodcasterModel *currentPodcaster = self.podcasters[self.currentPodcasterIndex];
     [currentPodcaster addTimeIntervalToTotalTime:timeInterval];
     
-    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:DateTimeFormatString];
+    NSString *date = [formatter stringFromDate:self.currentTotalTime];
+    [self.delegate totalTimeUpdatedTo:date];
     
 }
 

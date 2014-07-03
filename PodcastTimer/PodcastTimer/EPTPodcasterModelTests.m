@@ -44,5 +44,16 @@
     [self.delegateMock verify];
 }
 
+- (void)testAddingOneSecondTwice_CallsDelegateWithCorrectString {
+    [[self.delegateMock expect] totalTimeUpdatedTo:@"00:00:02"];
+    
+    NSTimeInterval interval = 1.0;
+    
+    [self.testObject addTimeIntervalToTotalTime:interval];
+    [self.testObject addTimeIntervalToTotalTime:interval];
+    
+    [self.delegateMock verify];
+}
+
 
 @end

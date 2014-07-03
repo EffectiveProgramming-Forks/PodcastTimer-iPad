@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPTPodcasterModel.h"
 
 @interface EPTPodcastTimerMainTableViewCell : UITableViewCell
 
-@property (nonatomic) NSDate *podcasterTimer;
-- (void)setPodcasterTitle:(NSString *)title;
+@property (nonatomic) EPTPodcasterModel *podcaster;
 
 @end
