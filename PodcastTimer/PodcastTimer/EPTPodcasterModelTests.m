@@ -55,5 +55,16 @@
     [self.delegateMock verify];
 }
 
+- (void)testUpdatePercentage_UpdatesDelegateWithCorrectValue {
+    [[self.delegateMock expect] percentageUpdatedTo:.5];
+    
+    [self.testObject addTimeIntervalToTotalTime:1.0];
+    
+    [self.testObject updatePercentageBasedOnTotalTimeInterval:2.0];
+    
+    [self.delegateMock verify];
+    
+}
+
 
 @end

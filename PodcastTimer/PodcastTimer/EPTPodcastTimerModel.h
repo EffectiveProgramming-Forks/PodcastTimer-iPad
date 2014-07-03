@@ -12,6 +12,7 @@
 @protocol EPTPodcastTimerModelDelegate <NSObject>
 
 - (void)totalTimeUpdatedTo:(NSString *)totalTime;
+- (void)currentPodcastersTalkingTimeUpdatedTo:(NSString *)talkingTime;
 
 @end
 

@@ -11,6 +11,7 @@
 @protocol EPTPodcasterModelDelegagte <NSObject>
 
 - (void)totalTimeUpdatedTo:(NSString *)dateTimeString;
+- (void)percentageUpdatedTo:(float)percentage;
 
 @end
 
@@ -21,6 +22,6 @@
 
 - (instancetype)initWithPodcasterName:(NSString *)name;
 - (void)addTimeIntervalToTotalTime:(NSTimeInterval)timeInterval;
-- (void)updatePercentageBasedOnTotalTime:(NSDate *)totalTime;
+- (void)updatePercentageBasedOnTotalTimeInterval:(NSTimeInterval)totalTimeInterval;
 
 @end

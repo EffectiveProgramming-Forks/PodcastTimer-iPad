@@ -54,5 +54,9 @@
     self.model.currentPodcasterIndex = index;
 }
 
+- (void)currentPodcastersTalkingTimeUpdatedTo:(NSString *)talkingTime {
+    
+}
+
 
 @end

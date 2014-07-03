@@ -15,6 +15,7 @@
 @property (nonatomic) NSDate *previousDate;
 @property (nonatomic) NSInteger amountOfPodcasters;
 @property (nonatomic, readwrite) NSDate *currentTotalTime;
+@property (nonatomic) NSDate *currentPodcastersTalkingTime;
 @property (nonatomic, readwrite) NSMutableArray *podcasters;
 @property (nonatomic) EPTTimer *timer;
 
@@ -44,10 +45,8 @@
 
 - (void)startTimer {
     self.previousDate = [NSDate date];
-    NSString *startString = @"00:00:00";
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:DateTimeFormatString];
-    self.currentTotalTime = [formatter dateFromString:startString];
+    self.currentTotalTime = [NSDate dateWithZeroTime];
+    self.currentPodcastersTalkingTime = [NSDate dateWithZeroTime];
     [self.timer scheduleTimer];
     self.timer.delegate = self;
     
@@ -60,14 +59,16 @@
     NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:self.previousDate];
     self.previousDate = currentDate;
     self.currentTotalTime = [self.currentTotalTime dateByAddingTimeInterval:timeInterval];
+    self.currentPodcastersTalkingTime = [self.currentPodcastersTalkingTime dateByAddingTimeInterval:timeInterval];
     EPTPodcasterModel *currentPodcaster = self.podcasters[self.currentPodcasterIndex];
     [currentPodcaster addTimeIntervalToTotalTime:timeInterval];
+    NSTimeInterval totalTimeInterval = [self.currentTotalTime timeIntervalSinceZeroTime];
+    for (EPTPodcasterModel *podcaster in self.podcasters) {
+        [podcaster updatePercentageBasedOnTotalTimeInterval:totalTimeInterval];
+    }
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:DateTimeFormatString];
-    NSString *date = [formatter stringFromDate:self.currentTotalTime];
-    [self.delegate totalTimeUpdatedTo:date];
-    
+    [self.delegate totalTimeUpdatedTo:[self.currentTotalTime defaultDescription]];
+//    [self.delegate currentPodcastersTalkingTimeUpdatedTo:[self.currentPodcastersTalkingTime defaultDescription]];
 }
 
 @end

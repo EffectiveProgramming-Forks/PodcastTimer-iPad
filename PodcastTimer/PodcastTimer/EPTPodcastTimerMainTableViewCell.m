@@ -12,6 +12,7 @@
 
 @property (nonatomic) IBOutlet UILabel *podcasterNameLabel;
 @property (nonatomic) IBOutlet UILabel *podcasterTimeLabel;
+@property (nonatomic) IBOutlet UILabel *podcasterPercentageLabel;
 
 @end
 
@@ -27,6 +28,10 @@
 
 -(void)totalTimeUpdatedTo:(NSString *)dateTimeString {
     self.podcasterTimeLabel.text = dateTimeString;
+}
+
+- (void)percentageUpdatedTo:(float)percentage {
+    self.podcasterPercentageLabel.text = [NSString stringWithFormat:@"Percentage: %i", (int)ceilf(percentage*100)];
 }
 
 @end

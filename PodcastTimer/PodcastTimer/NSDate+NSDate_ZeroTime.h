@@ -12,5 +12,6 @@
 
 +(NSDate *)dateWithZeroTime;
 - (NSString *)defaultDescription;
+- (NSTimeInterval)timeIntervalSinceZeroTime;
 
 @end

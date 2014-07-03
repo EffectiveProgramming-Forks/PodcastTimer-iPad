@@ -10,17 +10,27 @@
 
 @implementation NSDate (NSDate_ZeroTime)
 
+static NSDate *_dateWithZeroTime = nil;
+
 +(NSDate *)dateWithZeroTime {
-    NSString *startString = @"00:00:00";
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:DateTimeFormatString];
-    return [formatter dateFromString:startString];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *startString = @"00:00:00";
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:DateTimeFormatString];
+        _dateWithZeroTime = [formatter dateFromString:startString];
+    });
+    return _dateWithZeroTime;
 }
 
 - (NSString *)defaultDescription {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:DateTimeFormatString];
     return [formatter stringFromDate:self];
+}
+
+- (NSTimeInterval)timeIntervalSinceZeroTime {
+    return [self timeIntervalSinceDate:_dateWithZeroTime];
 }
 
 @end

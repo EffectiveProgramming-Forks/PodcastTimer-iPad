@@ -5,6 +5,8 @@
 //  Created by Eric Jones on 6/7/14.
 //  Copyright (c) 2014 Effective Programming. All rights reserved.
 //
+//There are some issues with these tests and making sure that integers are the right values and not just being called.
+//This is currently a shortcomming with OCMock
 
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
@@ -48,11 +50,14 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
+//- (void)tearDown
+//{
+//    [self.delegateMock stopMocking];
+//    [self.podcasterFactoryMock stopMocking];
+//    [self.podcasterModelMock stopMocking];
+//    [self.timerMock stopMocking];
+//    [super tearDown];
+//}
 
 - (void)testInit_CreatesCorrectAmountOfPodcasters {
     self.podcasterFactoryMock = [OCMockObject niceMockForClass:EPTPodcasterModelFactory.class];
@@ -108,5 +113,38 @@
     [self.timerDelegate timerFired];
     [self.delegateMock verify];
 }
+
+- (void)testTimerFired_TellsAllModelsToUpdatePercentages {
+    for (int i =0; i<5; i++) {
+        [[[self.podcasterModelMock expect] ignoringNonObjectArgs] updatePercentageBasedOnTotalTimeInterval:0];
+    }
+    [self.testObject startTimer];
+    [NSThread sleepForTimeInterval:0.1];
+    [self.timerDelegate timerFired];
+    
+    OCMVerifyAll(self.podcasterModelMock);
+}
+
+//- (void)testCurrentPodcastersTalkingTime_UpdatesWhenTimerFired {
+//    [[self.delegateMock expect] currentPodcastersTalkingTimeUpdatedTo:@"00:00:01"];
+//    
+//    [self.testObject startTimer];
+//    [NSThread sleepForTimeInterval:1.0];
+//    [self.timerDelegate timerFired];
+//    [self.delegateMock verify];
+//}
+//
+//- (void)testCurrentPodcastersTalkingTime_IsResetWhenPodcastersChange {
+//    OCMExpect([self.delegateMock currentPodcastersTalkingTimeUpdatedTo:@"00:00:02"]);
+//    [self.testObject startTimer];
+//    [NSThread sleepForTimeInterval:1.0];
+//    [self.timerDelegate timerFired];
+//    self.testObject.currentPodcasterIndex = 0;
+//    [NSThread sleepForTimeInterval:2.0];
+//    [self.timerDelegate timerFired];
+//    
+//    OCMVerifyAll(self.podcasterModelMock);
+//    
+//}
 
 @end
