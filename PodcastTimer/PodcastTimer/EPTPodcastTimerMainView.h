@@ -20,5 +20,6 @@
 @property (nonatomic) NSArray *podcasters;
 
 - (void)timeUpdatedTo:(NSString *)time;
+- (void)currentPodcasterTimeUpdatedTo:(NSString *)time;
 
 @end

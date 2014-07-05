@@ -52,6 +52,11 @@
     
 }
 
+- (void)setCurrentPodcasterIndex:(NSInteger)currentPodcasterIndex {
+    _currentPodcasterIndex = currentPodcasterIndex;
+    self.currentPodcastersTalkingTime =[NSDate dateWithZeroTime];
+}
+
 #pragma mark EPTTimerDelegate
 
 - (void)timerFired {
@@ -68,7 +73,7 @@
     }
     
     [self.delegate totalTimeUpdatedTo:[self.currentTotalTime defaultDescription]];
-//    [self.delegate currentPodcastersTalkingTimeUpdatedTo:[self.currentPodcastersTalkingTime defaultDescription]];
+    [self.delegate currentPodcastersTalkingTimeUpdatedTo:[self.currentPodcastersTalkingTime defaultDescription]];
 }
 
 @end

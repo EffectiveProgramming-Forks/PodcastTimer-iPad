@@ -48,15 +48,16 @@
     [self.mainView timeUpdatedTo:totalTime];
 }
 
+- (void)currentPodcastersTalkingTimeUpdatedTo:(NSString *)talkingTime {
+    [self.mainView currentPodcasterTimeUpdatedTo:talkingTime];
+}
+
 #pragma mark EPTPodcastTimerMainViewDelegate
 
 - (void)podcasterSelectedAtIndex:(NSInteger)index {
     self.model.currentPodcasterIndex = index;
 }
 
-- (void)currentPodcastersTalkingTimeUpdatedTo:(NSString *)talkingTime {
-    
-}
 
 
 @end

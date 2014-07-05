@@ -104,14 +104,14 @@
     OCMVerifyAll(self.podcasterModelMock);
 }
 
-- (void)testTimerFired_UpdatesDelegateWithNewTime {
+- (void)testTimerFired_UpdatesDelegateWithNewTotalTimeAndTalkingTime {
     
     OCMExpect([self.delegateMock totalTimeUpdatedTo:@"00:00:01"]);
-    
+    OCMExpect([self.delegateMock currentPodcastersTalkingTimeUpdatedTo:@"00:00:01"]);
     [self.testObject startTimer];
     [NSThread sleepForTimeInterval:1.0];
     [self.timerDelegate timerFired];
-    [self.delegateMock verify];
+    OCMVerifyAll(self.delegateMock);
 }
 
 - (void)testTimerFired_TellsAllModelsToUpdatePercentages {
@@ -124,27 +124,5 @@
     
     OCMVerifyAll(self.podcasterModelMock);
 }
-
-//- (void)testCurrentPodcastersTalkingTime_UpdatesWhenTimerFired {
-//    [[self.delegateMock expect] currentPodcastersTalkingTimeUpdatedTo:@"00:00:01"];
-//    
-//    [self.testObject startTimer];
-//    [NSThread sleepForTimeInterval:1.0];
-//    [self.timerDelegate timerFired];
-//    [self.delegateMock verify];
-//}
-//
-//- (void)testCurrentPodcastersTalkingTime_IsResetWhenPodcastersChange {
-//    OCMExpect([self.delegateMock currentPodcastersTalkingTimeUpdatedTo:@"00:00:02"]);
-//    [self.testObject startTimer];
-//    [NSThread sleepForTimeInterval:1.0];
-//    [self.timerDelegate timerFired];
-//    self.testObject.currentPodcasterIndex = 0;
-//    [NSThread sleepForTimeInterval:2.0];
-//    [self.timerDelegate timerFired];
-//    
-//    OCMVerifyAll(self.podcasterModelMock);
-//    
-//}
 
 @end

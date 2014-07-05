@@ -112,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hSa-XC-zE1">
-                                <rect key="frame" x="0.0" y="67" width="1024" height="701"/>
+                                <rect key="frame" x="0.0" y="109" width="1024" height="659"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -120,19 +120,29 @@
                                     <outlet property="delegate" destination="Eo1-Si-ocp" id="LRL-9w-yDR"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Current Podcaster Timer: 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-XM-DqJ">
+                                <rect key="frame" x="252" y="57" width="520" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="gXL-XM-DqJ" secondAttribute="centerX" id="3VU-Yf-qDb"/>
                             <constraint firstItem="hSa-XC-zE1" firstAttribute="leading" secondItem="Eo1-Si-ocp" secondAttribute="leading" id="Ohh-5S-Wrd"/>
                             <constraint firstAttribute="trailing" secondItem="hSa-XC-zE1" secondAttribute="trailing" id="Wpq-oQ-J8J"/>
                             <constraint firstItem="kEu-bc-7kA" firstAttribute="top" secondItem="hSa-XC-zE1" secondAttribute="bottom" id="XiM-EE-f0c"/>
                             <constraint firstItem="hSa-XC-zE1" firstAttribute="width" secondItem="Eo1-Si-ocp" secondAttribute="width" id="aMp-9J-o2e"/>
+                            <constraint firstItem="gXL-XM-DqJ" firstAttribute="top" secondItem="zgB-Fl-p4c" secondAttribute="bottom" constant="8" id="i5w-Ql-bXD"/>
                             <constraint firstAttribute="centerX" secondItem="zgB-Fl-p4c" secondAttribute="centerX" id="lgX-i9-lso"/>
-                            <constraint firstItem="hSa-XC-zE1" firstAttribute="top" secondItem="zgB-Fl-p4c" secondAttribute="bottom" constant="18" id="rUv-mf-rNc"/>
+                            <constraint firstItem="hSa-XC-zE1" firstAttribute="top" secondItem="zgB-Fl-p4c" secondAttribute="bottom" constant="60" id="rUv-mf-rNc"/>
                             <constraint firstItem="zgB-Fl-p4c" firstAttribute="top" secondItem="WaI-sF-Agz" secondAttribute="bottom" id="rkD-yf-7Uk"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <connections>
+                            <outlet property="currentPodcasterTimerLabel" destination="gXL-XM-DqJ" id="H5b-Hs-2xm"/>
                             <outlet property="mainTableView" destination="hSa-XC-zE1" id="aL4-9K-Zas"/>
                             <outlet property="timerLabel" destination="zgB-Fl-p4c" id="0IB-6G-SGN"/>
                         </connections>

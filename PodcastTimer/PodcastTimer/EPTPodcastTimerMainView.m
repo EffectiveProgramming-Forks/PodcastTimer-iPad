@@ -13,7 +13,7 @@
 
 @property (nonatomic) IBOutlet UITableView *mainTableView;
 @property (nonatomic) IBOutlet UILabel *timerLabel;
-
+@property (nonatomic) IBOutlet UILabel *currentPodcasterTimerLabel;
 
 @end
 
@@ -33,6 +33,10 @@
 
 - (void)timeUpdatedTo:(NSString *)time {
     self.timerLabel.text = [NSString stringWithFormat:@"Total Time: %@", time];
+}
+
+- (void)currentPodcasterTimeUpdatedTo:(NSString *)time {
+    self.currentPodcasterTimerLabel.text = [NSString stringWithFormat:@"Current Podcaster Timer: %@" , time];
 }
 
 #pragma mark UITableView

@@ -77,6 +77,14 @@
     OCMVerify([viewMock timeUpdatedTo:newTime]);
 }
 
+- (void)testPodcasterTimeUpdated_SetsPodcasterTimeOnView {
+    NSString *newTime = @"00:00:79";
+    
+    [modelDelegate currentPodcastersTalkingTimeUpdatedTo:newTime];
+    
+    OCMVerify([viewMock currentPodcasterTimeUpdatedTo:newTime]);
+}
+
 - (void)testPodcasterSelected_UpdatesModel {
     [viewDelegate podcasterSelectedAtIndex:1];
     
